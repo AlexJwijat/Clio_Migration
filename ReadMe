@@ -1,0 +1,35 @@
+Invoice Automation Script
+
+This Python script automates the process of editing invoice details on a given website. It uses the Selenium library to interact with the webpage, extracting information and editing elements as needed. The script's primary goal is to update the invoice number and remove additional lines in the invoice.
+Features
+
+    Log in to the website using provided username and password
+    Navigate to a specified URL containing the invoice data
+    Iterate through invoices, stopping when a specific invoice number is reached
+    Edit the invoice:
+        Extract the 4-digit invoice number from the description
+        Remove additional lines in the invoice
+        Update the invoice number field
+        Save the updated invoice
+    Repeat the process for all invoices until the specified stopping point
+
+Dependencies
+
+    Python 3.x
+    Selenium: pip install selenium
+    WebDriver Manager: pip install webdriver-manager
+
+Usage
+
+    Install the required dependencies.
+    Update the url variable with the URL containing the invoice data.
+    Run the script: python renumber.py
+    Provide your username and password when prompted.
+    The script will log in, navigate to the specified URL, and begin editing and renumbering the invoices.
+
+Notes
+
+    The script assumes a specific webpage structure. If the website structure changes, you may need to adjust the XPaths used to locate elements.
+    This script uses the Chrome WebDriver by default. To use a different browser, you'll need to install the appropriate WebDriver and update the script accordingly.
+    The script stops processing invoices when it encounters the specified stop_value. Adjust this value as needed.
+    The script will output information about its progress, including the invoice numbers it is processing and any errors encountered.
